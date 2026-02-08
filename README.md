@@ -159,6 +159,69 @@ Zsh 設定與外掛管理框架，用來快速建立可維護、可擴充的終�
 
 ---
 
+### Mole（免費開源 CLI 版系統清理工具）
+免費開源的命令列系統清理與優化工具，整合 CleanMyMac、AppCleaner、DaisyDisk、iStat Menus 功能於單一執行檔。
+
+- GitHub 專案：https://github.com/tw93/Mole
+- 作者：tw93
+- 安裝指令：`brew install mole`
+
+#### 核心功能
+- **深度清理（Deep Cleaning）**  
+  掃描並移除快取、日誌、瀏覽器暫存檔案，可釋放數十 GB 空間
+- **智慧卸載（Smart Uninstaller）**  
+  徹底移除 App 及其 launch agents、偏好設定、隱藏殘留檔案
+- **磁碟分析（Disk Insights）**  
+  視覺化磁碟使用狀況、管理大型檔案、重建快取、刷新系統服務
+- **即時監控（Live Monitoring）**  
+  即時顯示 CPU、GPU、記憶體、磁碟、網路狀態，診斷效能問題
+- **專案清理（Project Purge）**  
+  清理開發專案中的 `node_modules`、`target`、`build`、`dist` 等建置產物
+
+#### 特色
+- **單一執行檔**：所有功能整合在一個 CLI 工具中
+- **命令列介面**：適合鍵盤流與自動化腳本
+- **免費開源**：MIT 授權，完全免費
+- **安全設計**：支援 `--dry-run` 預覽變更，避免誤刪
+- **操作日誌**：所有檔案操作記錄於 `~/.config/mole/operations.log`
+
+#### 常用指令
+```bash
+mo                    # 互動式選單
+mo clean              # 深度清理
+mo uninstall          # 移除 App 與殘留檔案
+mo optimize           # 重建快取與服務
+mo analyze            # 視覺化磁碟分析
+mo status             # 即時系統健康儀表板
+mo purge              # 清理專案建置產物
+
+mo clean --dry-run    # 預覽清理計畫
+mo clean --debug      # 詳細操作日誌
+```
+
+#### 實際效果
+使用者回報平均釋放 **20-100GB** 磁碟空間，清理範圍包含：
+- 使用者 App 快取（平均 45GB）
+- 瀏覽器快取（Chrome、Safari、Firefox，平均 10GB）
+- 開發工具快取（Xcode、Node.js、npm，平均 23GB）
+- 系統日誌與暫存檔（平均 4GB）
+- App 專屬快取（Spotify、Dropbox、Slack，平均 8GB）
+
+#### 安全建議
+- 首次使用建議先執行 `mo clean --dry-run` 預覽
+- 支援 whitelist 功能保護特定路徑
+- 檔案刪除為永久性操作，請仔細檢查
+
+#### 終端機相容性
+- 推薦使用：Alacritty、kitty、WezTerm、Ghostty、Warp
+- 已知問題：iTerm2 可能有相容性問題
+
+#### 與 AppCleaner 比較
+- **AppCleaner**：GUI 介面，適合一般使用者
+- **Mole**：CLI 介面，功能更完整，適合進階使用者與自動化需求
+
+---
+
 ### IINA（推薦播放器）
 現代化 macOS 原生風格播放器。
 
@@ -252,6 +315,91 @@ Mac 清理與維護工具。
 
 ---
 
+### 遠端檔案傳輸工具（SFTP / FTP Clients）
+
+#### Termius（現代化 SSH/SFTP 客戶端）
+現代化的 SSH / SFTP 客戶端，跨平台支援，UI 精緻、操作直覺。
+
+- 官網：https://termius.com/
+- 支援平台：macOS、Windows、Linux、iOS、Android
+- GitHub CLI：https://github.com/termius/termius-cli
+
+##### 特色
+- **精緻 UI**：現代化介面設計，操作流暢直覺
+- **雲端同步**：支援跨裝置同步連線設定（需登入帳號）
+- **整合設計**：SSH 終端機與 SFTP 檔案管理整合於同一介面
+- **多平台支援**：桌面版與行動版資料同步
+- **團隊協作**：Pro 版支援團隊共享連線設定
+
+##### 版本比較
+- **免費版**：基本功能已堪用，單機使用足夠
+- **Pro 版**：支援雲端同步、團隊協作、進階功能
+
+##### CLI 工具
+提供 `termius` CLI 工具，可透過指令列管理 SSH 連線：
+```bash
+brew install termius          # 安裝 CLI 工具
+termius init                  # 初始化（登入、同步）
+termius host --address localhost --label myhost
+termius connect myhost
+termius import-ssh-config     # 從 ~/.ssh/config 匯入
+```
+
+##### 適用情境
+- 需要跨裝置同步 SSH/SFTP 連線設定
+- 重視 UI/UX 體驗的使用者
+- 團隊需要共享連線設定
+- 行動裝置需要存取遠端伺服器
+
+---
+
+#### Cyberduck（免費開源 SFTP/FTP 客戶端）
+輕量易用的檔案傳輸工具，Reddit 討論度最高的免費開源選擇。
+
+- 官網：https://cyberduck.io/
+- 授權：GPL 開源授權
+- 社群：活躍的開源社群
+
+##### 特色
+- **多協定支援**：SFTP、FTP、FTPS、S3、WebDAV、Azure、Google Drive、Dropbox、OneDrive 等
+- **拖放操作**：直覺的檔案拖放介面，適合入門使用者
+- **開源免費**：完全免費，無功能限制
+- **跨平台**：支援 macOS 與 Windows
+- **書籤管理**：可儲存常用連線，快速存取
+- **編輯器整合**：可設定外部編輯器直接編輯遠端檔案
+
+##### 雲端服務整合
+除了傳統 SFTP/FTP，Cyberduck 也支援主流雲端儲存服務：
+- Amazon S3
+- Google Cloud Storage
+- Microsoft Azure
+- Backblaze B2
+- Dropbox、Google Drive、OneDrive
+
+##### 使用建議
+- 適合需要多協定支援的使用者
+- 免費開源，無使用限制
+- 社群活躍，更新頻繁
+- 介面簡潔，學習曲線低
+
+##### 與其他工具比較
+- **vs FileZilla**：Cyberduck 介面更現代化，macOS 整合度更高
+- **vs Transmit**（付費）：Transmit 功能更強大，但需付費
+- **vs Termius**：Cyberduck 專注檔案傳輸，Termius 整合 SSH 終端機
+
+---
+
+#### 選擇建議
+
+| 工具 | 價格 | 特色 | 適用對象 |
+|------|------|------|----------|
+| **Termius** | 免費/Pro 付費 | 現代化 UI、雲端同步、跨平台 | 重視體驗、需要跨裝置同步 |
+| **Cyberduck** | 免費開源 | 多協定、輕量、社群活躍 | 預算有限、需要多協定支援 |
+| **Transmit** | 付費 | 功能強大、macOS 原生、效能優秀 | 願意付費、追求最佳體驗 |
+| **FileZilla** | 免費開源 | 功能完整、跨平台 | 傳統使用者、習慣 FileZilla |
+
+---
+
 ## 八、Finder 與常用快捷技巧（高頻）
 
 - `Cmd + Shift + G`：跳轉路徑
@@ -267,6 +415,58 @@ Mac 清理與維護工具。
 ### dotfiles 管理
 - https://hackmd.io/@lunzaizai/SJXGJa_4s
 - 建議版本化 `.zshrc`、終端機設定、常用工具設定
+
+#### GNU Stow
+專為 dotfiles 管理設計的符號連結管理工具，透過建立 symlink 的方式整理設定檔。
+
+- 官方網站：https://www.gnu.org/software/stow/
+- Homebrew：https://formulae.brew.sh/formula/stow
+- 安裝指令：`brew install stow`
+
+**核心概念**
+- **符號連結管理器（Symlink Farm Manager）**  
+  原本設計用於在單一目錄樹下整齊組織軟體（如 `/usr/local`）
+- **dotfiles 管理最佳實踐**  
+  現代開發者主要用於跨機器管理設定檔（`.zshrc`、`.gitconfig`、`.vimrc` 等）
+
+**工作原理**
+1. 在 dotfiles 倉庫中以資料夾組織不同工具的設定檔
+2. 使用 `stow` 指令建立符號連結到 home 目錄
+3. 所有設定檔集中版本控制，方便同步與備份
+
+**優點**
+- **輕量極簡**：遵循 Unix 哲學，專注做好一件事
+- **版本控制友善**：與 Git 完美搭配
+- **跨平台支援**：適用於 Linux、macOS、BSD
+- **無依賴性**：純 Perl 腳本，幾乎所有系統都能執行
+
+**實務範例**
+```bash
+# 目錄結構
+~/dotfiles/
+  zsh/
+    .zshrc
+  git/
+    .gitconfig
+  vim/
+    .vimrc
+
+# 使用 stow 建立連結
+cd ~/dotfiles
+stow zsh    # 建立 ~/.zshrc -> ~/dotfiles/zsh/.zshrc
+stow git    # 建立 ~/.gitconfig -> ~/dotfiles/git/.gitconfig
+stow vim    # 建立 ~/.vimrc -> ~/dotfiles/vim/.vimrc
+```
+
+**使用建議**
+- 搭配 Git 進行版本控制
+- 可與 Oh My Zsh、Homebrew 設定一併管理
+- 適合需要在多台機器間同步開發環境的使用者
+
+**其他選擇**
+- **chezmoi**：功能更豐富，支援範本化與加密（已於 Issue #4 討論）
+- **yadm**：基於 Git 的 dotfiles 管理工具
+- **rcm**：ThoughtBot 開發的 dotfiles 管理工具
 
 ---
 
