@@ -226,17 +226,6 @@ Mac 清理與維護工具。
 
 ---
 
-### 超級右鍵（免費）
-強化 Finder 右鍵選單。
-
-- https://github.com/ysc3839/super-right-click
-- 常用功能：
-  - 顯示隱藏檔
-  - 複製完整路徑
-  - 快速在資料夾開啟終端機
-
----
-
 ### Amphetamine（免費，Mac 防休眠工具）
 強大的 Mac 防休眠工具，可讓你的 MacBook 保持喚醒狀態。
 
