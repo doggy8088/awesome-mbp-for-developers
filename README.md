@@ -200,7 +200,7 @@ mo clean --debug      # 詳細操作日誌
 ```
 
 #### 實際效果
-使用者回報平均釋放 **20-100GB** 磁碟空間，清理範圍包含：
+使用者回報平均釋放 **20-100GB** 磁碟空間（參考：[GitHub Issues](https://github.com/tw93/Mole/issues)），清理範圍包含：
 - 使用者 App 快取（平均 45GB）
 - 瀏覽器快取（Chrome、Safari、Firefox，平均 10GB）
 - 開發工具快取（Xcode、Node.js、npm，平均 23GB）
@@ -214,7 +214,7 @@ mo clean --debug      # 詳細操作日誌
 
 #### 終端機相容性
 - 推薦使用：Alacritty、kitty、WezTerm、Ghostty、Warp
-- 已知問題：iTerm2 可能有相容性問題
+- 已知問題：iTerm2 可能有 TUI 渲染相容性問題（詳見 [GitHub Issues](https://github.com/tw93/Mole/issues)）
 
 #### 與 AppCleaner 比較
 - **AppCleaner**：GUI 介面，適合一般使用者
@@ -464,7 +464,7 @@ stow vim    # 建立 ~/.vimrc -> ~/dotfiles/vim/.vimrc
 - 適合需要在多台機器間同步開發環境的使用者
 
 **其他選擇**
-- **chezmoi**：功能更豐富，支援範本化與加密（已於 Issue #4 討論）
+- **chezmoi**：功能更豐富，支援範本化與加密（參考 [Issue #4](https://github.com/doggy8088/awesome-mbp-for-developers/issues/4)）
 - **yadm**：基於 Git 的 dotfiles 管理工具
 - **rcm**：ThoughtBot 開發的 dotfiles 管理工具
 
