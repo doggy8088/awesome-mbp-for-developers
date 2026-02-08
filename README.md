@@ -226,17 +226,6 @@ Mac 清理與維護工具。
 
 ---
 
-### 超級右鍵（免費）
-強化 Finder 右鍵選單。
-
-- https://github.com/ysc3839/super-right-click
-- 常用功能：
-  - 顯示隱藏檔
-  - 複製完整路徑
-  - 快速在資料夾開啟終端機
-
----
-
 ## 七、開發與生產力工具（進階）
 
 - **OrbStack**：Docker / VM 整合
