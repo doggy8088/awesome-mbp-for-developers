@@ -237,6 +237,25 @@ Mac 清理與維護工具。
 
 ---
 
+### Amphetamine（免費，Mac 防休眠工具）
+強大的 Mac 防休眠工具，可讓你的 MacBook 保持喚醒狀態。
+
+- https://apps.apple.com/tw/app/amphetamine/id937984704?mt=12
+- 功能特色：
+  - 防止系統休眠與螢幕保護程式啟動
+  - 可設定排程與觸發條件
+  - 豐富的自訂選項與情境模式
+
+#### 其他選擇
+- **Caffeine**  
+  https://www.caffeine-app.net/  
+  輕量級防休眠工具，介面簡潔易用
+- **KeepingYouAwake**  
+  https://github.com/newmarcel/KeepingYouAwake  
+  開源替代方案，基於 Caffeine 的現代化版本
+
+---
+
 ## 七、開發與生產力工具（進階）
 
 - **OrbStack**：Docker / VM 整合
