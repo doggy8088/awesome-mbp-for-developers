@@ -249,6 +249,7 @@ Mac 清理與維護工具。
 - **1Password / Bitwarden**：密碼管理（安全性觀點分歧）
 - **ScreenBrush**：簡報即時標註
 - **BetterTouchTool**：觸控板手勢高度自訂
+- **[Glim](https://github.com/NeoPanic/Glim)**：免費開源的 macOS 檔案檢視器，在同一工作區閱讀 Markdown（含 Mermaid 圖表與公式）、PDF、圖片、JSON、CSV 與原始碼；提供 Apple Silicon 與 Intel 安裝包。
 
 ---
 
