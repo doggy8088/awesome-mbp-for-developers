@@ -150,6 +150,12 @@ Zsh 設定與外掛管理框架，用來快速建立可維護、可擴充的終�
 
 ---
 
+### DisplayPilot（外接螢幕亮度、對比、色彩與滾輪控制）
+- https://huayanming.github.io/displaypilot/?src=awesomembp
+- DDC/CI 能用時直接控制面板；面板不回應時改用 CoreGraphics 伽馬表接管，一樣調得動
+- 色彩以「首次接管時讀到的曲線」為基準，不是面板出廠曲線
+- 付費，一次買斷，14 天全功能試用
+
 ## 六、系統工具與日常應用
 
 ### AppCleaner（必裝）
