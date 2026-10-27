@@ -148,6 +148,10 @@ Zsh 設定與外掛管理框架，用來快速建立可維護、可擴充的終�
 - https://github.com/waydabber/BetterDisplay
 - 用於高解析度螢幕、外接顯示器微調
 
+### LayoutKeeper（外接螢幕視窗與桌面空間自動恢復）
+- https://github.com/tumingke0/LayoutKeeper
+- 免費開源的選單列工具，插拔外接螢幕或睡眠喚醒後，自動將視窗放回原本的螢幕、桌面空間（Space）與位置，並支援依機身連接埠自動切換螢幕排列
+
 ---
 
 ## 六、系統工具與日常應用
